@@ -7,6 +7,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 
 .container {
     width: 1250px;
@@ -86,13 +94,15 @@ body {
     border-radius: 50%;
 }
 
-#tweet-text-area {
+.tweet-text-area {
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     border: none;
     resize: none;
     font-family: Roboto;
     font-size: 19px;
+    display: block;
+    overflow: auto;
 
     &::placeholder {
         font-family: Roboto;
@@ -122,3 +132,56 @@ body {
     height: 8px;
     background-color: rgb(230, 236, 240);;
 }
+
+.tweet {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    column-gap: 16px;
+    border-bottom: 1px solid rgb(230, 236, 240);
+
+    .user-name {
+        color: #14171a;
+        font-weight: bold;
+    }
+    .user-handle {
+        color: #657786;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .tweet-time {
+        color: #657786;
+    }
+
+    img {
+        border-radius: 50%;
+    }
+    
+    .tweet-content {
+        font-size: 15px;
+    }
+
+    .tweet-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .tweet-action {
+            width: 25px;
+
+            img {
+                width: 20px;
+                padding: 10px;
+                filter: invert(.5);
+
+                &:hover {
+                    filter: none;
+                    background-color: #e8f5fe;
+                }
+            }
+        }
+    }
+}
+
