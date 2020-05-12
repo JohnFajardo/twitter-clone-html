@@ -1,6 +1,8 @@
-#README
+# Twitter clone
 
 I'm planning to build a Twitter clone. This is just the mock HTML, nothing to see here.
+
+![](screenshot.png)
 
 However, if you insist on checking it out, just clone it, run gulp and go to http://localhost:3000.
 
