@@ -2,7 +2,6 @@ body {
     margin: 0;
 }
 
-
 .left-column {
     background-color: #fff;
     width: 100%;
@@ -21,16 +20,18 @@ body {
             display: none;
         }
 
+        .nav-icon-container {
+            max-width: 28px;
+        }
+
+        .nav-label-container {
+            visibility: hidden;
+            height: 0;
+        }
+
+
         .small-visible {
             display: inline-block;
-            .nav-item-container {
-                .nav-icon-container {
-                    display: block;
-                    max-width: 24px;
-                }
-
-                
-            }
         }
         
     }
