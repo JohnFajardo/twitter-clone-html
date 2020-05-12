@@ -7,7 +7,7 @@ import browserSync from "browser-sync";
 const sassOptions = { outputStyle: 'expanded', errLogToConsole: true };
 
 exports.sass = () => (
-    gulp.src('./src/scss/styles.scss')
+    gulp.src('./src/scss/*.scss')
         .pipe(sass(sassOptions))
         .pipe(gulp.dest('./dist'))
         .pipe(browserSync.reload({ stream: true }))
@@ -27,7 +27,7 @@ exports.copy = () => (
 );
 
 exports.minifycss = () => (
-    gulp.src('./dist/styles.css')
+    gulp.src('./dist/*.css')
         .pipe(cleanCSS({ compatibility: 'ie8', level: 2 }))
         .pipe(gulp.dest('dist'))
 );

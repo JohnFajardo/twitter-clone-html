@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+}
+
+
+.left-column {
+    background-color: #fff;
+    width: 100%;
+    padding: 8px 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 6;
+    
+    nav {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .nav-link {
+            display: none;
+        }
+
+        .small-visible {
+            display: inline-block;
+            .nav-item-container {
+                .nav-icon-container {
+                    display: block;
+                    max-width: 24px;
+                }
+
+                
+            }
+        }
+        
+    }
+}
+
+.right-column {
+    display: none;
+}
+
+.feed-header {
+    padding: 16px;
+    font-weight: 800;
+    font-size: 19px;
+    border-bottom: 1px solid rgb(230, 236, 240);
+}
+
+.tweet-area {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    padding: 16px;
+    column-gap: 16px;
+}
+
+.tweet-profile-pic {
+    border-radius: 50%;
+    max-width: 28px;
+}
+
+.tweet-text-area {
+    width: 100%;
+    min-height: 50px;
+    border: none;
+    resize: none;
+    font-family: Roboto;
+    font-size: 19px;
+    display: block;
+    overflow: auto;
+
+    &::placeholder {
+        font-family: Roboto;
+        font-size: 19px;
+    }
+}
+
+.tweet-button-container {
+    text-align: right;
+    .tweet-button{
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        background-color: rgb(29, 161, 242);
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 32px;
+    }
+}
+
+.separator {
+    height: 8px;
+    background-color: rgb(230, 236, 240);;
+}
+
+
+.tweet {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    column-gap: 16px;
+    border-bottom: 1px solid rgb(230, 236, 240);
+
+    .user-name {
+        color: #14171a;
+        font-weight: bold;
+    }
+    .user-handle {
+        color: #657786;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .tweet-time {
+        color: #657786;
+    }
+
+    img {
+        border-radius: 50%;
+        max-width: 48px;
+    }
+    
+    .tweet-content {
+        font-size: 15px;
+    }
+
+    .tweet-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+        .tweet-action {
+            width: 25px;
+
+            img {
+                width: 20px;
+                padding: 10px;
+                filter: invert(.5);
+
+                &:hover {
+                    filter: none;
+                    background-color: #e8f5fe;
+                }
+            }
+        }
+    }
+}

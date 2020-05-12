@@ -24,11 +24,7 @@ a {
     overflow: hidden
 }
 
-.left-column, .right-column {
-    // background-color: lightsteelblue; FOR DEBUGGING ONLY, DON'T JUDGE ME.
-    padding:10px;
-    position: sticky;
-}
+
 
 .content {
     padding: 10px;
@@ -75,7 +71,7 @@ a {
     padding: 0;
 }
 
-.header {
+.feed-header {
     padding: 16px;
     font-weight: 800;
     font-size: 19px;
@@ -184,6 +180,17 @@ a {
     }
 }
 
+.right-column {
+    display: none;
+}
+
+@media screen and (min-width: 1250px) {
+    .left-column, .right-column {
+        display: initial;
+        padding:10px;
+        position: sticky;
+    }
+  }
 
 .search {
     display: grid;
@@ -270,3 +277,4 @@ a {
         }
     }
 }
+
