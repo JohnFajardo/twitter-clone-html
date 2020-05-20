@@ -251,8 +251,15 @@ body {
         overflow: hidden;
     }
 
+    .nav {
+        display: grid;
+        justify-items: left;
+    }
+
     .nav-link {
+        justify-self: start;
         text-decoration: none;
+
 
         &:hover {
             text-decoration: underline;
