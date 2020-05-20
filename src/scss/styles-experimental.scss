@@ -267,7 +267,7 @@ body {
         justify-self: start;
         display: block;
         text-decoration: none;
-        color: #14171a;
+        //color: #fff;
 
         &:hover {
             text-decoration: underline;
@@ -292,7 +292,7 @@ body {
             }
 
             .nav-label-container span {
-                color: 14171a;
+                color: #14171a;
             }
         }
     }
